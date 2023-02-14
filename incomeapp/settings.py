@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "expenses"
+    "expenses",
+    "authentication"
 ]
 
 MIDDLEWARE = [
@@ -76,11 +77,8 @@ WSGI_APPLICATION = "incomeapp.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "incomeexpensesdb",
-        "USER":"postgres",
-        "PASSWORD":"2311",
-        "HOST":"localhost"
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
